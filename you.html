@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untukmu</title>
+    <style>
+        /* Gaya Umum */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffafbd, #ffc3a0);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 0 20px;
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            background: red;
+            margin: 30px auto;
+            transform: rotate(-45deg);
+            animation: pulse 1.5s infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            background: red;
+            border-radius: 50%;
+            top: -50px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 50px;
+            top: 0;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: white;
+            color: #ff4d6d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background: #ffb3c1;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Untukmu, yang selalu ada di hatiku</h1>
+    <div class="heart"></div>
+    <p>
+        Aku mungkin bukan orang yang sempurna,<br>
+        tapi denganmu, aku merasa semuanya sempurna.<br>
+        Terima kasih telah menjadi bagian dari hidupku.<br>
+        Aku mencintaimu.
+    </p>
+    <button class="button" onclick="alert('Aku benar-benar mencintaimu ❤️')">Klik untuk tahu isi hatiku</button>
+</body>
+</html>
